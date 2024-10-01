@@ -1,0 +1,74 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #bdc2a7;
+background-image: url("https://www.transparenttextures.com/patterns/little-knobs.png");
+
+}
+
+.input-field-send-button{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  position: sticky;
+  bottom: 0;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.msg-input-field{
+  border-radius: 25px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.send-button{
+  border-radius: 50%;
+  height: 39.2px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages-screen{
+  display: flex;
+  flex-direction: column;
+  width:60%;
+  margin: auto;
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.message-bubble{
+  width: fit-content;
+  background-color: rgb(2, 93, 2);
+  padding: 10px;
+  border-radius: 8px;
+  align-self: flex-end;
+}
+.received-message{
+  width: fit-content;
+  background-color: rgb(45, 45, 45);
+  padding: 10px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+.message-content{
+  margin: 0px;
+  color: white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message-time-stamp{
+  margin: 0px;
+  text-align: end;
+  margin-top:5px;
+  color: rgb(185, 184, 184);
+  font-family: sans-serif;
+  font-size: 12px;
+}
