@@ -3,6 +3,7 @@ body{
   padding: 0px;
   background-color: #bdc2a7;
 background-image: url("https://www.transparenttextures.com/patterns/little-knobs.png");
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -24,13 +25,19 @@ background-image: url("https://www.transparenttextures.com/patterns/little-knobs
   width: 100%;
 }
 
-.send-button{
+.send-button,.attachment-button{
   border-radius: 50%;
   height: 39.2px;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.attachment-button{
+  background-color: white;
+  border: 2px solid;
 }
 
 .messages-screen{
@@ -71,4 +78,67 @@ background-image: url("https://www.transparenttextures.com/patterns/little-knobs
   color: rgb(185, 184, 184);
   font-family: sans-serif;
   font-size: 12px;
+}
+
+#file-att{
+  display: none;
+}
+
+.login-window{
+  margin: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-top:110px ;
+}
+
+.login-form, .signup-form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 37%;
+  border: 1px solid rgb(103, 98, 98);
+  padding: 45px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #484c3a;
+  backdrop-filter: blur(30px);
+  background-image: url("https://www.transparenttextures.com/patterns/little-knobs.png");
+  margin: auto;
+}
+
+.login-form input, .signup-form input{
+  padding: 15px 18px;
+  border-radius: 8px;
+  outline: 1px solid transparent;
+  /* outline: none; */
+  border: none;
+}
+.login-form input:focus{
+  outline: 2px solid rgb(74, 68, 68);
+}
+
+.login-button,.signup-button{
+  border-radius: 8px;
+  border: none;
+  padding: 15px 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px black;
+  background-color: #bdc2a7;
+  transition: all .3s ease;
+}
+.login-button:hover{
+  background-color: #c0cc8a;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0px;
+}
+
+.signup-form span, .login-form span{
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+  text-decoration: underline;
 }

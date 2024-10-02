@@ -2,15 +2,20 @@ import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import InputFeild from "./InputFeild";
 import MessageList from "./MessageList";
+import Login from "./Login";
 
 const socket = io("http://localhost:4000");
 
 const ChatApp = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     socket.on("receiveMessage", (message) => {
-      setMessages((prev) => [...prev, { content: message, sent: false }]);
+      setMessages((prev) => [
+        ...prev,
+        { content: message.content, sent: false, type: message.type },
+      ]);
     });
 
     return () => {
@@ -18,9 +23,10 @@ const ChatApp = () => {
     };
   }, []);
 
-  const handleSendMessage = (message) => {
-    setMessages((prev) => [...prev, { content: message, sent: true }]);
-    socket.emit("sendMessage", message);
+  const handleSendMessage = (message, type) => {
+    const newMessage = { content: message, sent: true, type };
+    setMessages((prev) => [...prev, newMessage]);
+    socket.emit("sendMessage", newMessage);
   };
 
   return (

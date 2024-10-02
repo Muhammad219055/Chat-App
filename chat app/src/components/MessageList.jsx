@@ -15,6 +15,7 @@ const MessageList = ({ messages }) => {
           key={index}
           content={message.content}
           sent={message.sent}
+          type={message.type}
         />
       ))}
       <div ref={messageEndRef} />
